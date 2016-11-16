@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:padding="20dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                local:MvxBind="DrawableName PersonPhto"
+                android:id="@+id/imageView1"
+                android:src="@drawable/gur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_gravity="left"
+                android:scaleType="fitStart" />
+            <TextView
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="19sp"
+                local:MvxBind="Text PerInfo"
+                android:padding="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/textView2"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp" />
+        </LinearLayout>
+        <CheckBox
+            android:text="Request Calander"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            local:MvxBind="Checked IsCheckedCal"
+            android:textColor="@android:color/holo_blue_dark"
+            android:padding="13dp"
+            android:textSize="18sp"
+            android:background="@drawable/style_input"
+            android:layout_marginTop="8dp" />
+        <CheckBox
+            android:text="Request Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox1"
+            android:textColor="@android:color/holo_blue_dark"
+            android:padding="13dp"
+            local:MvxBind="Checked IsCheckedLoc"
+            android:textSize="18sp"
+            android:background="@drawable/style_input"
+            android:layout_marginTop="8dp" />
+        <TextView
+            android:text="Other information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="17sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="3dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            local:MvxBind="Text ExtraInfo, Mode=TwoWay"
+            android:background="@drawable/style_input"
+            android:padding="13dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_blue_light"
+            android:textColorHint="@android:color/holo_blue_light"
+            android:hint="Extra Information" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:layout_marginTop="18dp">
+            <Button
+                android:text="Cancel"
+                android:background="#2DB4B4"
+                android:padding="13dp"
+                android:textSize="18sp"
+                local:MvxBind="Click CancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:id="@+id/button2"
+                android:layout_weight="1" />
+            <Button
+                android:text="Send"
+                android:background="#2DB4B4"
+                android:padding="13dp"
+                android:textSize="18sp"
+                local:MvxBind="Click SendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:id="@+id/button1"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

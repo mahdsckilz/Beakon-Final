@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="30px"
+        android:minHeight="30px"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/style_input"
+        android:showDividers="end"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        <ImageView
+            local:MvxBind="DrawableName photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gur"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginLeft="5dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:layout_marginStart="20dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout1">
+                <TextView
+                    android:text="First Name"
+                    local:MvxBind="Text pFirstname"
+                    android:textColor="#3366CC"
+                    android:textSize="17sp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                <TextView
+                    android:text="First Name"
+                    local:MvxBind="Text pLastname"
+                    android:textColor="#3366CC"
+                    android:textSize="17sp"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="4dp"
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:text="LastName"
+                local:MvxBind="Text PLocation"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="14sp"
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

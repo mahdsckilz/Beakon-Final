@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginBottom="2dp"
+        android:id="@+id/topNavLayout"
+        android:background="@drawable/navst">
+        <ImageButton
+            android:src="@drawable/requesticon"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:id="@+id/btnRequestSettings"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            local:MvxBind="Click NavReqCmd"
+            android:background="#56b3d2"
+            android:layout_margin="1dp" />
+        <ImageButton
+            android:src="@drawable/notificationicon"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:id="@+id/btnNotificationSettings"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp" />
+        <ImageButton
+            android:src="@drawable/settingsicon"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:id="@+id/btnSettingsSettings"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:layout_gravity="right"
+            local:MvxBind="Click NavSetCmd"
+            android:background="#56b3d2"
+            android:layout_margin="1dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f3f3f3"
+            android:textColor="#ff8d54"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:paddingTop="20px"
+            android:paddingBottom="20px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:text="Requests" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ff8d54"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:paddingTop="20px"
+            android:paddingBottom="20px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:text="Answers"
+            local:MvxBind="Click NavAns"
+            android:layout_margin="2dp" />
+    </LinearLayout>
+    <BeakonMvvm.Droid.BindableSwipeRefreshLayout
+        android:id="@+id/refresher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        local:MvxBind="Refreshing IsRefreshing; RefreshCommand ReloadCommand">
+        <Mvx.MvxListView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            local:MvxItemTemplate="@layout/notificationcustomlistview"
+            local:MvxBind="ItemsSource Message; ItemClick SelectMessage"
+            android:background="#f3f3f3" />
+    </BeakonMvvm.Droid.BindableSwipeRefreshLayout>
+</LinearLayout>

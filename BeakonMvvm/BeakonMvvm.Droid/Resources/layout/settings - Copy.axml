@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginBottom="2dp"
+        android:id="@+id/topNavLayout"
+        android:background="@drawable/navst">
+        <ImageButton
+            android:src="@drawable/requesticon"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:id="@+id/btnRequestSettings"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            local:MvxBind="Click NavReqCmd"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_margin="1dp" />
+        <ImageButton
+            android:src="@drawable/notificationicon"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:id="@+id/btnNotificationSettings"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            local:MvxBind="Click NavNotCmd"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp" />
+        <ImageButton
+            android:src="@drawable/settingsicon"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:id="@+id/btnSettingsSettings"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:layout_gravity="right"
+            android:background="#6599ff"
+            android:layout_margin="1dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/Container"
+        android:layout_height="match_parent"
+        android:layout_margin="11dp"
+        android:background="#fff">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:background="#000">
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/space2"
+                android:layout_weight="2" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <ImageView
+                local:MvxBind="DrawableName Photo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:id="@+id/imageView1"
+                android:paddingLeft="20px"
+                android:src="@drawable/gur"
+                android:scaleType="fitStart" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+            <TextView
+                android:id="@+id/textFirstName"
+                android:textColor="#ff0099cc"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="10px"
+                android:text="@string/SettingsFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/space1"
+                android:layout_weight="1" />
+            <EditText
+                android:id="@+id/textFirstNameInput"
+                android:textColor="#000"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                local:MvxBind="Text fName" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2">
+            <TextView
+                android:id="@+id/textLastName"
+                android:textColor="#ff0099cc"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="10px"
+                android:text="@string/SettingsLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/space2"
+                android:layout_weight="1" />
+            <EditText
+                android:id="@+id/textLastNameInput"
+                android:textColor="#000"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                local:MvxBind="Text lName" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3">
+            <TextView
+                android:id="@+id/textEmail"
+                android:textColor="#ff0099cc"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="10px"
+                android:text="@string/SettingsEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/space3"
+                android:layout_weight="1" />
+            <EditText
+                android:id="@+id/textEmailInput"
+                android:textColor="#000"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                local:MvxBind="Text Eemail" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayoutSSID">
+            <TextView
+                android:id="@+id/textEmail"
+                android:textColor="#ff0099cc"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="10px"
+                android:text="SSID"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/space3"
+                android:layout_weight="1" />
+            <EditText
+                android:id="@+id/textEmailInput"
+                android:textColor="#000"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                local:MvxBind="Text Wifi" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textAutoCal"
+                android:textColor="#ff0099cc"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="10px"
+                android:text="@string/SettingsCalendarAuto"
+                android:layout_width="wrap_content"
+                android:layout_gravity="left"
+                android:layout_height="match_parent" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/space32"
+                android:layout_weight="0.2" />
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/switch1"
+                local:MvxBind="Checked Calandr"
+                android:layout_gravity="right" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textAutoLoc"
+                android:textColor="#ff0099cc"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="10px"
+                android:text="@string/SettingsLocationAuto"
+                android:layout_width="wrap_content"
+                android:layout_gravity="left"
+                android:layout_height="match_parent" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/space31"
+                android:layout_weight="0.2" />
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/switchLoc"
+                local:MvxBind="Checked Location"
+                android:layout_gravity="right" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

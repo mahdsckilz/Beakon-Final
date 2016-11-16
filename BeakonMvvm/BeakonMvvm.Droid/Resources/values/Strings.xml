@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">BeakonMvvm.Droid</string>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">Beakon</string>
+    <string name="SettingsFirstName">FIRSTNAME</string>
+    <string name="SettingsLastName">LASTNAME</string>
+    <string name="SettingsEmail">EMAIL</string>
+    <string name="SettingsFavCont">FAVOURATE CONTACTS</string>
+    <string name="SettingsCalendarAuto">AUTO SEND CALENDAR</string>
+    <string name="SettingsLocationAuto">AUTO SEND LOCATION</string>
+    <string name="SettingsYourContacts">YOUR CONTACTS</string>
+    <string name="SettingsAllContacts">ALL CONTACTS</string>
+    <string name="abc"></string>
+</resources>
